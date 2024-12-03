@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Real Estate Listings</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="assets/images/building.svg" alt="Real Estate Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listing.html">Listings</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Explore Stunning Properties</h1>
+      <p>If you're looking for a place where you can be yourself, don't give up. Keep searching until you find a place that feels like home.</p>
+
+      <div class="carousel">
+        <img id="carousel-image" src="assets/Suffle/property-1.jpg" alt="Property Image">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Real Estate Listings. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to dynamically change images in a loop
+    const images = [
+      'assets/Suffle/property-2.jpg',
+      'assets/Suffle/property-3.jpg',
+      'assets/Suffle/property-4.jpg',
+      'assets/Suffle/property-5.jpg', 
+      'assets/Suffle/property-6.jpg', 
+      'assets/Suffle/property-7.jpg', 
+      'assets/Suffle/property-8.jpg'
+    ];
+
+    let currentIndex = 0;
+    const carouselImage = document.getElementById('carousel-image');
+
+    function changeImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      carouselImage.src = images[currentIndex];
+    }
+
+    // Change the image every 3 seconds
+    setInterval(changeImage, 3000);
+  </script>
+
+</body>
+
+</html>
